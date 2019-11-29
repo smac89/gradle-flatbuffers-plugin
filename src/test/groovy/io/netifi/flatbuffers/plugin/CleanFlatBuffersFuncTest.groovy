@@ -45,7 +45,7 @@ class CleanFlatBuffersFuncTest extends Specification {
             plugins {
                 id 'idea'
                 id 'java'
-                id 'io.netifi.flatbuffers'
+                id 'com.github.smac89.flatbuffers'
             }
             
             flatbuffers {
