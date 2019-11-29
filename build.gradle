@@ -14,24 +14,30 @@ dependencies {
     testImplementation('org.spockframework:spock-core:1.3-groovy-2.5')
 }
 
-group = 'io.netifi'
+group = 'com.github.smac89'
 version = '1.0.6'
 
 pluginBundle {
-    website = 'https://github.com/netifi/gradle-flatbuffers-plugin'
-    vcsUrl = 'https://github.com/netifi/gradle-flatbuffers-plugin'
+    vcsUrl = 'https://github.com/smac89/gradle-flatbuffers-plugin'
+    website = 'https://github.com/smac89/gradle-flatbuffers-plugin'
     tags = [ 'serialization', 'build', 'codegen' ]
+
+    plugins {
+        flatBuffersPlugin {
+        }
+    }
 }
-
-
 
 gradlePlugin {
     plugins {
         flatBuffersPlugin {
-            id = 'io.netifi.flatbuffers'
+            id = 'com.github.smac89.flatbuffers'
             displayName = 'FlatBuffers Plugin'
             implementationClass = 'io.netifi.flatbuffers.plugin.FlatBuffersPlugin'
-            description = "Gradle plugin for generating code from Google FlatBuffers schemas."
+            description = """
+                |Gradle plugin for generating code from Google FlatBuffers schemas.
+                |Fork of https://github.com/netifi/gradle-flatbuffers-plugin
+                """.stripMargin()
         }
     }
 }
